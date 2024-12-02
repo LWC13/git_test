@@ -38,7 +38,27 @@ git reset -- hard 修改點id (改到某一版本並將後面的版本全刪除)
 - 在資料夾中建立 .gitignore
 - 將需要忽略的檔名加入其中
 
+◎ 新增協作者
+- repositories setting -> collaborators ->新增成員email
+◎ 協作者要做的事
+- 將儲存庫pull到本地端：git clone https://......
+- 有一方更新時，只需要使用 git pull 就可以將更新的內容拉到本地端
+- 建立新分支：git checkout -b branch名稱
+- push時要用分支名稱：git push origin branch名稱
+❖ 在github頁面可發起pull request，請求將更改哪容加入主線分支
+
+by https://www.youtube.com/watch?v=FKXRiAiQFiY
+
+
 ◎ 上傳相關指令
 git remote add origin git@github.com:LWC13/git_test.git
 git branch -M main
 git push -u origin main
+
+◎ 解決 git@github.com permission denied (publickey) fatal: Could not read from remote repository.
+- 進入.ssh資料夾 cd ~/.ssh
+- 產生鑰匙 ssh-keygen
+- 複製.pub內容 cat ~/.ssh/id_rsa.pub
+- 將密鑰貼至github Setting -> SSH and GPG keys -> New SSH key
+- 重新push
+by https://andytsai.coderbridge.io/2024/04/07/解決-git@githubcom-permission-denied-(publickey)/

@@ -37,3 +37,8 @@ git reset -- hard 修改點id (改到某一版本並將後面的版本全刪除)
 ◎ 檔案不需要被追蹤時
 - 在資料夾中建立 .gitignore
 - 將需要忽略的檔名加入其中
+
+◎ 上傳相關指令
+git remote add origin git@github.com:LWC13/git_test.git
+git branch -M main
+git push -u origin main
